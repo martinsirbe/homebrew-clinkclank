@@ -5,11 +5,11 @@
 class Cld < Formula
   desc "An unofficial CLI for Cloudinary"
   homepage "https://github.com/martinsirbe/go-cloudinary"
-  version "0.0.2"
+  version "0.0.3"
 
   on_macos do
-    url "https://github.com/martinsirbe/go-cloudinary/releases/download/v0.0.2/cld_0.0.2_darwin_all.tar.gz"
-    sha256 "b17b038580901d35e495bc27faa3bdce8c7d54bd81f271c1c1243ece1cb50017"
+    url "https://github.com/martinsirbe/go-cloudinary/releases/download/v0.0.3/cld_0.0.3_darwin_all.tar.gz"
+    sha256 "e25f2127408d50bdc6b1bae915fa0a9ddd59b70212a3bc9124c7727d1959b801"
 
     def install
       bin.install "cld"
@@ -19,8 +19,8 @@ class Cld < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/martinsirbe/go-cloudinary/releases/download/v0.0.2/cld_0.0.2_linux_amd64.tar.gz"
-        sha256 "2d119b800ec1ffeb00a9a2f2c74f1c42eb8a427aae4f7a6e4a1c26269438f781"
+        url "https://github.com/martinsirbe/go-cloudinary/releases/download/v0.0.3/cld_0.0.3_linux_amd64.tar.gz"
+        sha256 "8800f047e3864af751bd38aec3446458a869c019024148b70afdd97f4a568f73"
 
         def install
           bin.install "cld"
@@ -29,8 +29,8 @@ class Cld < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/martinsirbe/go-cloudinary/releases/download/v0.0.2/cld_0.0.2_linux_arm64.tar.gz"
-        sha256 "82e8272b9ac33ea5006b139c030dea7c1da2e60f411108d7868b1313b1f2c63c"
+        url "https://github.com/martinsirbe/go-cloudinary/releases/download/v0.0.3/cld_0.0.3_linux_arm64.tar.gz"
+        sha256 "fc8d63938012081b7ab951d7679794dfb0a728bbb9fa21a40721304f53ce9dc7"
 
         def install
           bin.install "cld"
