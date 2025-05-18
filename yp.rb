@@ -5,11 +5,11 @@
 class Yp < Formula
   desc "Year Progress Indicator"
   homepage "https://github.com/martinsirbe/go-year-progress"
-  version "0.1.2"
+  version "0.1.3"
 
   on_macos do
-    url "https://github.com/martinsirbe/go-year-progress/releases/download/v0.1.2/yp_0.1.2_darwin_all.tar.gz"
-    sha256 "c72f8450515d1135bf7c71801999e7f1e326e882061530e83cfd4b63d41a3582"
+    url "https://github.com/martinsirbe/go-year-progress/releases/download/v0.1.3/yp_0.1.3_darwin_all.tar.gz"
+    sha256 "ec1fe68c3096b5bea11d412634f86e5a589099cd040d01c5d4f07b0dcb6e9046"
 
     def install
       bin.install "yp"
@@ -17,24 +17,18 @@ class Yp < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/martinsirbe/go-year-progress/releases/download/v0.1.2/yp_0.1.2_linux_amd64.tar.gz"
-        sha256 "ec56bd4564227c497c4f6716bc07607b8de5adba00c3545d8a2e40f0aa1ec9e8"
-
-        def install
-          bin.install "yp"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/martinsirbe/go-year-progress/releases/download/v0.1.3/yp_0.1.3_linux_amd64.tar.gz"
+      sha256 "8d9ab9e85270e0529a6b886501bf421bc093d66da8ef8b6326e976bf9d4f4ffb"
+      def install
+        bin.install "yp"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/martinsirbe/go-year-progress/releases/download/v0.1.2/yp_0.1.2_linux_arm64.tar.gz"
-        sha256 "9ad75615a8f42e5d3598eea995b646e94e5ae20ca9d9f9ba9869914862d3a4c2"
-
-        def install
-          bin.install "yp"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/martinsirbe/go-year-progress/releases/download/v0.1.3/yp_0.1.3_linux_arm64.tar.gz"
+      sha256 "c54dd90a3df9ad7233b76a921e11365bad2c5b712d85c3ac2722b2c0597ee3f6"
+      def install
+        bin.install "yp"
       end
     end
   end
