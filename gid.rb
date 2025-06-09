@@ -5,11 +5,11 @@
 class Gid < Formula
   desc "Generate Unique IDs"
   homepage "https://github.com/martinsirbe/gid"
-  version "0.0.1"
+  version "0.0.2"
 
   on_macos do
-    url "https://github.com/martinsirbe/gid/releases/download/v0.0.1/gid_0.0.1_darwin_all.tar.gz"
-    sha256 "f6c02761ab01720b3f0b5f4033093f14cd7290e74b12167d2fbb950289de3bf0"
+    url "https://github.com/martinsirbe/gid/releases/download/v0.0.2/gid_0.0.2_darwin_all.tar.gz"
+    sha256 "0c73e79aa7b8227f5f89a15910712d34c032eef621d399a6a27b7f87e261fc6d"
 
     def install
       bin.install "gid"
@@ -18,15 +18,15 @@ class Gid < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/martinsirbe/gid/releases/download/v0.0.1/gid_0.0.1_linux_amd64.tar.gz"
-      sha256 "73788d7708d72aaf0832400511e5b1d72d53ae7e3e9ea001277ab0c86bf924c9"
+      url "https://github.com/martinsirbe/gid/releases/download/v0.0.2/gid_0.0.2_linux_amd64.tar.gz"
+      sha256 "eba6594405e24a2d8cd7d7b4c5b99f2e183aeee7fe5d65ad24c8b9dd0096b6b0"
       def install
         bin.install "gid"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/martinsirbe/gid/releases/download/v0.0.1/gid_0.0.1_linux_arm64.tar.gz"
-      sha256 "207d1386463583655f02b67f735b49b9f8f1e9c2016d36a20dc244cc4b1380d0"
+      url "https://github.com/martinsirbe/gid/releases/download/v0.0.2/gid_0.0.2_linux_arm64.tar.gz"
+      sha256 "eaa86b0a6836ba8af73dad3405dfe2456350dd60e5c7b2c3dc37388c57cfe805"
       def install
         bin.install "gid"
       end
